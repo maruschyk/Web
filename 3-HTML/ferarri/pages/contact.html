@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Контакти Ferrari</title>
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html">Головна</a>
+      <a href="./about.html">Про Ferrari</a>
+      <a href="./contact.html">Контакти</a>
+    </nav>
+
+    <h1>Зв'язатися з нами</h1>
+
+    <form action="#" method="get">
+      <p>
+        <label for="name">Ім’я:</label>
+        <input id="name" type="text" required />
+      </p>
+
+      <p>
+        <label for="email">Email:</label>
+        <input id="email" type="email" required />
+      </p>
+
+      <p>
+        <label for="topic">Тема:</label>
+        <select>
+          <option>Питання про авто</option>
+          <option>Покупка</option>
+        </select>
+      </p>
+
+      <fieldset>
+        <legend>Як з вами зв’язатись?</legend>
+        <label><input type="radio" name="contact" /> Email</label>
+        <label><input type="radio" name="contact" /> Телефон</label>
+      </fieldset>
+
+      <p>
+        <textarea placeholder="Ваше повідомлення"></textarea>
+      </p>
+
+      <label>
+        <input type="checkbox" required />
+        Погоджуюсь з умовами
+      </label>
+
+      <br /><br />
+      <button type="submit">Надіслати</button>
+    </form>
+  </body>
+</html>
