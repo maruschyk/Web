@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Сайт про Ferrari — легендарні спортивні автомобілі, швидкість і стиль."
+    />
+    <title>Ferrari — легенда швидкості</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./js/main.js" defer></script>
+    <script src="./js/ui.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="./index.html" class="brand">Ferrari</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Відкрити меню"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          ☰
+        </button>
+        <nav id="primary-nav" class="nav-list" aria-label="Головна навігація">
+          <a href="./index.html">Головна</a>
+          <a href="./pages/about.html">Про Ferrari</a>
+          <a href="./pages/contact.html">Контакти</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Перемкнути тему">
+          🌙
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Ferrari — легенда швидкості</h1>
+
+      <section class="card">
+        <h2>Що таке Ferrari?</h2>
+        <p>
+          <strong>Ferrari</strong> — це італійський бренд, що створює одні з
+          найшвидших автомобілів у світі.
+        </p>
+        <p>Ці авто символізують <em>швидкість, розкіш та інновації</em>.</p>
+      </section>
+
+      <section class="section">
+        <h2>Чому Ferrari особливі?</h2>
+        <p>Ferrari відомі своїм дизайном та потужними двигунами.</p>
+        <p>Компанія також бере участь у гонках Формули-1.</p>
+      </section>
+
+      <div class="two-column">
+        <section class="section list-card">
+          <h2>Популярні моделі</h2>
+          <ul>
+            <li>Ferrari F8 Tributo</li>
+            <li>Ferrari 488 GTB</li>
+            <li>Ferrari SF90 Stradale</li>
+          </ul>
+        </section>
+
+        <section class="section list-card">
+          <h2>Етапи розвитку</h2>
+          <ol>
+            <li>Заснування компанії</li>
+            <li>Перші гоночні перемоги</li>
+            <li>Світова популярність</li>
+          </ol>
+        </section>
+      </div>
+
+      <figure class="figure">
+        <img
+          src="https://cimg0.ibsrv.net/ibimg/hgm/1920x1080-1/100/499/ferrari_100499276.jpg"
+          alt="Ferrari 488 GTB"
+          width="400"
+          height="250"
+          class="zoomable"
+          data-title="Ferrari 488 GTB"
+        />
+        <figcaption>Ferrari 488 GTB (клікни, щоб збільшити)</figcaption>
+      </figure>
+
+      <section class="section">
+        <h2>Каталог моделей</h2>
+
+        <div class="filter-bar" role="group" aria-label="Фільтр моделей">
+          <button class="filter-btn is-active" type="button" data-filter="all">
+            Усі
+          </button>
+          <button class="filter-btn" type="button" data-filter="road">
+            Дорожні
+          </button>
+          <button class="filter-btn" type="button" data-filter="race">
+            Гоночні
+          </button>
+          <button class="filter-btn" type="button" data-filter="hybrid">
+            Гібриди
+          </button>
+        </div>
+
+        <div class="cards-grid" id="models-grid">
+          <article class="model-card" data-category="road">
+            <button
+              class="fav-btn"
+              type="button"
+              data-id="f8"
+              aria-label="В обране"
+            >
+              ★
+            </button>
+            <h3>F8 Tributo</h3>
+            <p class="model-meta">Дорожній · 720 к.с.</p>
+            <button
+              class="btn-text details-btn"
+              type="button"
+              data-title="Ferrari F8 Tributo"
+              data-power="720 к.с."
+              data-desc="Середньомоторний спорткар із двигуном V8 twin-turbo. Спадкоємець 488 GTB."
+            >
+              Деталі
+            </button>
+          </article>
+
+          <article class="model-card" data-category="road">
+            <button
+              class="fav-btn"
+              type="button"
+              data-id="488"
+              aria-label="В обране"
+            >
+              ★
+            </button>
+            <h3>488 GTB</h3>
+            <p class="model-meta">Дорожній · 670 к.с.</p>
+            <button
+              class="btn-text details-btn"
+              type="button"
+              data-title="Ferrari 488 GTB"
+              data-power="670 к.с."
+              data-desc="Класичний берлінетта з турбованим V8. Баланс комфорту та динаміки."
+            >
+              Деталі
+            </button>
+          </article>
+
+          <article class="model-card" data-category="hybrid">
+            <button
+              class="fav-btn"
+              type="button"
+              data-id="sf90"
+              aria-label="В обране"
+            >
+              ★
+            </button>
+            <h3>SF90 Stradale</h3>
+            <p class="model-meta">Гібрид · 1000 к.с.</p>
+            <button
+              class="btn-text details-btn"
+              type="button"
+              data-title="Ferrari SF90 Stradale"
+              data-power="1000 к.с."
+              data-desc="Перший серійний плагін-гібрид Ferrari. Три електромотори + V8."
+            >
+              Деталі
+            </button>
+          </article>
+
+          <article class="model-card" data-category="hybrid">
+            <button
+              class="fav-btn"
+              type="button"
+              data-id="laferrari"
+              aria-label="В обране"
+            >
+              ★
+            </button>
+            <h3>LaFerrari</h3>
+            <p class="model-meta">Гібрид · 963 к.с.</p>
+            <button
+              class="btn-text details-btn"
+              type="button"
+              data-title="Ferrari LaFerrari"
+              data-power="963 к.с."
+              data-desc="Флагманський гіперкар із системою HY-KERS на основі технологій Формули-1."
+            >
+              Деталі
+            </button>
+          </article>
+
+          <article class="model-card" data-category="race">
+            <button
+              class="fav-btn"
+              type="button"
+              data-id="296gt3"
+              aria-label="В обране"
+            >
+              ★
+            </button>
+            <h3>296 GT3</h3>
+            <p class="model-meta">Гоночний · 600 к.с.</p>
+            <button
+              class="btn-text details-btn"
+              type="button"
+              data-title="Ferrari 296 GT3"
+              data-power="600 к.с."
+              data-desc="Гоночна версія для змагань класу GT3 з двигуном V6."
+            >
+              Деталі
+            </button>
+          </article>
+
+          <article class="model-card" data-category="race">
+            <button
+              class="fav-btn"
+              type="button"
+              data-id="488ch"
+              aria-label="В обране"
+            >
+              ★
+            </button>
+            <h3>488 Challenge</h3>
+            <p class="model-meta">Гоночний · 670 к.с.</p>
+            <button
+              class="btn-text details-btn"
+              type="button"
+              data-title="Ferrari 488 Challenge"
+              data-power="670 к.с."
+              data-desc="Трекова модель для монокласної серії Ferrari Challenge."
+            >
+              Деталі
+            </button>
+          </article>
+        </div>
+
+        <p class="empty-state" id="models-empty" hidden>
+          Немає моделей у цій категорії.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Порівняння моделей</h2>
+        <table>
+          <caption>
+            Характеристики Ferrari
+          </caption>
+          <thead>
+            <tr>
+              <th>Модель</th>
+              <th>Потужність</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>F8 Tributo</td>
+              <td>720 к.с.</td>
+            </tr>
+            <tr>
+              <td>SF90</td>
+              <td>1000 к.с.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Часті запитання</h2>
+        <div class="accordion">
+          <div class="accordion__item">
+            <button
+              class="accordion__trigger"
+              type="button"
+              aria-expanded="false"
+            >
+              <span>Де виробляють Ferrari?</span
+              ><span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__panel" hidden>
+              <p>Усі автомобілі збирають на заводі в Маранелло, Італія.</p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button
+              class="accordion__trigger"
+              type="button"
+              aria-expanded="false"
+            >
+              <span>Чи бере Ferrari участь у Формулі-1?</span
+              ><span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__panel" hidden>
+              <p>
+                Так, Scuderia Ferrari — найстаріша команда в історії Формули-1.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button
+              class="accordion__trigger"
+              type="button"
+              aria-expanded="false"
+            >
+              <span>Що означає логотип «гарцюючий кінь»?</span
+              ><span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__panel" hidden>
+              <p>
+                Cavallino Rampante — символ удачі, успадкований від італійського
+                льотчика-аса.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Ferrari Fan Page</p>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Повернутися вгору">
+      ↑
+    </button>
+
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal__overlay" data-modal-close></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button
+          class="modal__close"
+          type="button"
+          aria-label="Закрити"
+          data-modal-close
+        >
+          ×
+        </button>
+        <h3 class="modal__title" id="modal-title"></h3>
+        <div class="modal__body"></div>
+      </div>
+    </div>
+  </body>
+</html>

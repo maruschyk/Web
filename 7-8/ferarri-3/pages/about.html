@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Про Ferrari — відео та звук двигуна легендарного бренду."
+    />
+    <title>Про Ferrari</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="../js/main.js" defer></script>
+    <script src="../js/ui.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="../index.html" class="brand">Ferrari</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Відкрити меню"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          ☰
+        </button>
+        <nav id="primary-nav" class="nav-list" aria-label="Головна навігація">
+          <a href="../index.html">Головна</a>
+          <a href="./about.html">Про Ferrari</a>
+          <a href="./contact.html">Контакти</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Перемкнути тему">
+          🌙
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Про Ferrari</h1>
+
+      <section class="card">
+        <p>Ferrari — це символ швидкості, перемог і престижу.</p>
+      </section>
+
+      <div class="two-column">
+        <section class="section media-card">
+          <h2>Відео Ferrari</h2>
+          <video controls class="media-video">
+            <source
+              src="../assets/media/video_2026-04-16_21-45-30.mp4"
+              type="video/mp4"
+            />
+            <p>Ваш браузер не підтримує відео</p>
+          </video>
+          <p class="media-caption">Динаміка та звук Ferrari у русі</p>
+        </section>
+
+        <section class="section media-card">
+          <h2>Звук двигуна Ferrari</h2>
+          <audio controls class="media-audio">
+            <source
+              src="../assets/media/astonmartinvantagev12-ferrari-458-italia-sound-effect-going-fast-360530.mp3"
+              type="audio/mp3"
+            />
+            <p>Ваш браузер не підтримує аудіо</p>
+          </audio>
+          <p class="media-caption">Характерний рев двигуна V12</p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Ferrari Fan Page</p>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Повернутися вгору">
+      ↑
+    </button>
+  </body>
+</html>

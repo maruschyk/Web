@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Контакти — форма зворотного зв'язку Ferrari Fan Page."
+    />
+    <title>Контакти Ferrari</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="../js/main.js" defer></script>
+    <script src="../js/contact.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="../index.html" class="brand">Ferrari</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Відкрити меню"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          ☰
+        </button>
+        <nav id="primary-nav" class="nav-list" aria-label="Головна навігація">
+          <a href="../index.html">Головна</a>
+          <a href="./about.html">Про Ferrari</a>
+          <a href="./contact.html">Контакти</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Перемкнути тему">
+          🌙
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Зв'язатися з нами</h1>
+
+      <div class="form-result card" id="form-result" hidden>
+        <h2>Дякуємо! Дані надіслано</h2>
+        <div class="form-result__body" id="form-result-body"></div>
+      </div>
+
+      <form
+        action="#"
+        method="get"
+        class="card form"
+        id="contact-form"
+        novalidate
+      >
+        <h2>Напишіть нам</h2>
+
+        <p class="form-group">
+          <label for="name">Ім'я:</label>
+          <input id="name" name="name" type="text" required minlength="2" />
+          <span class="error-text" data-error-for="name"></span>
+        </p>
+
+        <p class="form-group">
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" required />
+          <span class="error-text" data-error-for="email"></span>
+        </p>
+
+        <p class="form-group">
+          <label for="topic">Тема:</label>
+          <select id="topic" name="topic">
+            <option>Питання про авто</option>
+            <option>Покупка</option>
+          </select>
+        </p>
+
+        <fieldset>
+          <legend>Як з вами зв'язатись?</legend>
+          <label
+            ><input type="radio" name="contact" value="email" checked />
+            Email</label
+          >
+          <label
+            ><input type="radio" name="contact" value="phone" /> Телефон</label
+          >
+        </fieldset>
+
+        <p class="form-group">
+          <label for="message">Повідомлення:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            maxlength="500"
+            placeholder="Ваше повідомлення"
+          ></textarea>
+          <span class="char-counter" id="char-counter">0 / 500</span>
+          <span class="error-text" data-error-for="message"></span>
+        </p>
+
+        <p class="form-group checkbox-group">
+          <label>
+            <input type="checkbox" name="agree" required />
+            Погоджуюсь з умовами
+          </label>
+          <span class="error-text" data-error-for="agree"></span>
+        </p>
+
+        <div class="form-actions">
+          <button type="submit">Надіслати</button>
+          <button type="button" class="btn-secondary" id="clear-draft">
+            Очистити чернетку
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Ferrari Fan Page</p>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Повернутися вгору">
+      ↑
+    </button>
+
+    <div class="modal" id="confirm-modal" aria-hidden="true">
+      <div class="modal__overlay" data-confirm-close></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="confirm-title"
+      >
+        <h3 class="modal__title" id="confirm-title">Очистити чернетку?</h3>
+        <div class="modal__body">
+          <p>Усі введені дані буде видалено. Дію не можна скасувати.</p>
+          <div class="form-actions">
+            <button type="button" id="confirm-yes">Так, очистити</button>
+            <button type="button" class="btn-secondary" data-confirm-close>
+              Скасувати
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
