@@ -1,0 +1,46 @@
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+  .nav-list a {
+    text-align: center;
+  }
+
+  .two-column {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .section,
+  .card {
+    padding: 16px 16px;
+  }
+
+  .container {
+    width: min(100% - 20px, 1100px);
+  }
+}
+
+@media (max-width: 420px) {
+  h1 {
+    font-size: 1.55rem;
+  }
+
+  th,
+  td {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

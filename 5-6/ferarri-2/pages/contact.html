@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Контакти — форма зворотного зв'язку Ferrari Fan Page." />
+    <title>Контакти Ferrari</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-list container">
+        <a href="../index.html">Головна</a>
+        <a href="./about.html">Про Ferrari</a>
+        <a href="./contact.html" class="active">Контакти</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Зв'язатися з нами</h1>
+
+      <form action="#" method="get" class="card form">
+        <h2>Напишіть нам</h2>
+
+        <p class="form-group">
+          <label for="name">Ім'я:</label>
+          <input id="name" name="name" type="text" required minlength="2" />
+        </p>
+
+        <p class="form-group">
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" required />
+        </p>
+
+        <p class="form-group">
+          <label for="topic">Тема:</label>
+          <select id="topic" name="topic">
+            <option>Питання про авто</option>
+            <option>Покупка</option>
+          </select>
+        </p>
+
+        <fieldset>
+          <legend>Як з вами зв'язатись?</legend>
+          <label><input type="radio" name="contact" value="email" checked /> Email</label>
+          <label><input type="radio" name="contact" value="phone" /> Телефон</label>
+        </fieldset>
+
+        <p class="form-group">
+          <label for="message">Повідомлення:</label>
+          <textarea id="message" name="message" rows="5" placeholder="Ваше повідомлення"></textarea>
+        </p>
+
+        <p class="form-group checkbox-group">
+          <label>
+            <input type="checkbox" name="agree" required />
+            Погоджуюсь з умовами
+          </label>
+        </p>
+
+        <button type="submit">Надіслати</button>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Ferrari Fan Page</p>
+    </footer>
+  </body>
+</html>
