@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users CRUD — HTTP-запити у JavaScript</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="eyebrow">GET · POST · PATCH · DELETE</div>
+        <h1>Користувачі</h1>
+        <p class="subtitle">
+          Отримання, пошук, створення, оновлення та видалення користувачів через
+          REST API (dummyjson.com). Зміни на сервері не зберігаються — API їх
+          лише імітує.
+        </p>
+      </header>
+
+      <section class="panel">
+        <h2 class="panel-title">Створити користувача</h2>
+        <form id="createForm" class="create-form" novalidate>
+          <input
+            id="firstName"
+            class="field"
+            type="text"
+            placeholder="First name"
+            required
+          />
+          <input
+            id="lastName"
+            class="field"
+            type="text"
+            placeholder="Last name"
+            required
+          />
+          <input
+            id="age"
+            class="field"
+            type="number"
+            placeholder="Age"
+            min="1"
+            required
+          />
+          <input
+            id="email"
+            class="field"
+            type="email"
+            placeholder="Email"
+            required
+          />
+          <button type="submit" class="btn btn-primary">Create user</button>
+        </form>
+      </section>
+
+      <div class="controls">
+        <button id="getUsersBtn" type="button" class="btn btn-primary">
+          Get users
+        </button>
+        <input
+          id="searchInput"
+          class="field grow"
+          type="text"
+          placeholder="Пошук користувачів…"
+          autocomplete="off"
+        />
+        <button id="searchBtn" type="button" class="btn">Search</button>
+      </div>
+      <div id="loader" class="status hidden">
+        <span class="spinner" aria-hidden="true"></span>
+        <span>Loading...</span>
+      </div>
+      <div id="notice" class="msg msg-ok hidden"></div>
+      <div id="error" class="msg msg-err hidden"></div>
+      <div id="usersContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
